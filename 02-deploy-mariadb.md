@@ -10,8 +10,10 @@ Installing mariadb dependensi
 
 Edit file /etc/mysql/mariadb.conf.d/50-server.cnf
 - edit on line 104 set to
-  - character-set-server  = utf8mb4
-  - collation-server      = utf8mb4_general_ci
+  - character-set-server = utf8mb4
+  - collation-server = utf8mb4_general_ci
+  - bind-address = 0.0.0.0
+  - max_connections = 500
 - sudo systemctl restart mariadb
 
 Reconfigure MariaDB
