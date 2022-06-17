@@ -25,5 +25,6 @@ Reconfigure MariaDB
   - Reload privilege tables now? [Y/n] y
 - sudo systemctl restart mariadb
 
-TEST LOGIN
-- 
+Test Login
+- sudo mysql -u root -p 
+- Password: <input root database password> Ok, if success to mysql console
