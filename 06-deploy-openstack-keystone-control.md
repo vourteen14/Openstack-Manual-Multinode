@@ -22,21 +22,21 @@ Configure Keystone
 
 Write Environtment file
 - add file admin-openrc.sh
-  - export OS_PROJECT_DOMAIN_NAME=default
-  - export OS_USER_DOMAIN_NAME=default
-  - export OS_PROJECT_NAME=admin
-  - export OS_USERNAME=admin
-  - export OS_PASSWORD=<Password>
-  - export OS_AUTH_URL=http://30.30.30.251r:5000/v3
-  - export OS_IDENTITY_API_VERSION=3
-  - export OS_IMAGE_API_VERSION=2
+  - `````export OS_PROJECT_DOMAIN_NAME=default`````
+  - `````export OS_USER_DOMAIN_NAME=default`````
+  - `````export OS_PROJECT_NAME=admin`````
+  - `````export OS_USERNAME=admin`````
+  - `````export OS_PASSWORD=<Password>`````
+  - `````export OS_AUTH_URL=http://30.30.30.251:5000/v3`````
+  - `````export OS_IDENTITY_API_VERSION=3`````
+  - `````export OS_IMAGE_API_VERSION=2`````
 - setup permission to file
-  - chmod 600 admin-openrc.sh
+  - `````chmod 600 admin-openrc.sh`````
 - activate the file
-  - source admin-openrc.sh
+  - `````source admin-openrc.sh`````
 
 Add openstack project
-- openstack project create --domain default --description "Service Project" service
-- openstack project list
+- `````openstack project create --domain default --description "Service Project" service`````
+- `````openstack project list`````
 
 SUCCESS if show project name service
