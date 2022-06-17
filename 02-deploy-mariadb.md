@@ -4,7 +4,7 @@ Pre-Notes
 - Openstack uses mariadb for backend service database, all service openstack saving data in mariadb.
 - A runing operating system has been configure, like user can sudo withoud password, network, system upgrade etc.
 
-Installing mariadb dependensi
+Install Dependencies
 - sudo apt update && sudo apt upgrade -y
 - sudo apt install mariadb-server -y
 
