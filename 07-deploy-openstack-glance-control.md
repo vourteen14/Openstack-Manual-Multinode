@@ -1,3 +1,5 @@
+Activate Environtment File
+- `````source admin-openrc.sh`````
 Create Openstack Project
 - `````openstack user create --domain default --project service --password <Password> glance`````
 - `````openstack role add --project service --user glance admin`````
