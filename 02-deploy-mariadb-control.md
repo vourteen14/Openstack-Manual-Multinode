@@ -5,19 +5,20 @@ Pre-Notes
 - A runing operating system has been configure, like user can sudo withoud password, network, system upgrade etc.
 
 Install Dependencies
-- sudo apt update && sudo apt upgrade -y
-- sudo apt install mariadb-server -y
+- `````sudo apt update && sudo apt upgrade -y`````
+- `````sudo apt install mariadb-server -y`````
 
 Edit file /etc/mysql/mariadb.conf.d/50-server.cnf
 - edit on line 104 set to
-  - character-set-server = utf8mb4
-  - collation-server = utf8mb4_general_ci
-  - bind-address = 0.0.0.0
-  - max_connections = 500
-- sudo systemctl restart mariadb
+  - `````character-set-server = utf8mb4`````
+  - `````collation-server = utf8mb4_general_ci`````
+  - `````bind-address = 0.0.0.0`````
+  - `````max_connections = 500`````
+- restart mariadb service
+  - `````sudo systemctl restart mariadb`````
 
 Reconfigure MariaDB
-- sudo mysql_secure_installation
+- `````sudo mysql_secure_installation`````
   - Set root password? [Y/n] y
     New password: <input root database password>
     Re-enter new password: <input root database password>
@@ -25,8 +26,9 @@ Reconfigure MariaDB
   - Disallow root login remotely? [Y/n] y
   - Remove test database and access to it? [Y/n] y
   - Reload privilege tables now? [Y/n] y
-- sudo systemctl restart mariadb
+- restart mariadb service
+  - `````sudo systemctl restart mariadb`````
 
 Test Login
-- sudo mysql -u root -p 
-- Password: <input root database password> Ok, if success to mysql console
+- `````sudo mysql -u root -p````` 
+- `````Password: <input root database password>````` Ok, if success to mysql console
