@@ -1,5 +1,6 @@
 Activate Environtment File
 - `````source admin-openrc.sh`````
+
 Create Openstack Project
 - `````openstack user create --domain default --project service --password <Password> glance`````
 - `````openstack role add --project service --user glance admin`````
@@ -56,3 +57,8 @@ Sync Glance Database
 
 Restart service glance
 - `````sudo systemctl restart glance-api && sudo systemctl enable glance-api`````
+
+Add Image to glance
+- wget https://download.cirros-cloud.net/0.5.2/cirros-0.5.2-x86_64-disk.img
+- openstack image create --file cirros-0.5.2-x86_64-disk.img --container-format bare --disk-format qcow2 cirros-0.5.2-x86_64
+- openstack image list > IF Show Image name cirros-0.5.2-x86_64, setup success
