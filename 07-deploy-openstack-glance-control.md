@@ -27,26 +27,26 @@ Backup Configuration File
 
 Write Configuration 
 - add file /etc/glance/glance-api.conf
- - `````[DEFAULT]`````
- - `````bind_host = 0.0.0.0`````
- - `````[glance_store]`````
- - `````stores = file,http`````
- - `````default_store = file`````
- - `````filesystem_store_datadir = /var/lib/glance/images/`````
- - `````[database]`````
- - `````connection = mysql+pymysql://glance:<Password>@30.30.30.251/glance`````
- - `````[keystone_authtoken]`````
- - `````www_authenticate_uri = http://30.30.30.251:5000`````
- - `````auth_url = http://30.30.30.251:5000`````
- - `````memcached_servers = 30.30.30.251:11211`````
- - `````auth_type = password`````
- - `````project_domain_name = default`````
- - `````user_domain_name = default`````
- - `````project_name = service`````
- - `````username = glance`````
- - `````password = <Password>`````
- - `````[paste_deploy]`````
- - `````flavor = keystone`````
+  - `````[DEFAULT]`````
+  - `````bind_host = 0.0.0.0`````
+  - `````[glance_store]`````
+  - `````stores = file,http`````
+  - `````default_store = file`````
+  - `````filesystem_store_datadir = /var/lib/glance/images/`````
+  - `````[database]`````
+  - `````connection = mysql+pymysql://glance:<Password>@30.30.30.251/glance`````
+  - `````[keystone_authtoken]`````
+  - `````www_authenticate_uri = http://30.30.30.251:5000`````
+  - `````auth_url = http://30.30.30.251:5000`````
+  - `````memcached_servers = 30.30.30.251:11211`````
+  - `````auth_type = password`````
+  - `````project_domain_name = default`````
+  - `````user_domain_name = default`````
+  - `````project_name = service`````
+  - `````username = glance`````
+  - `````password = <Password>`````
+  - `````[paste_deploy]`````
+  - `````flavor = keystone`````
   
 Setup permission configuration files
 - `````sudo chmod 640 /etc/glance/glance-api.conf`````
