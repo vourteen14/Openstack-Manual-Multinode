@@ -23,7 +23,7 @@ Install Dependencies
 - `````sudo apt install placement-api -y`````
 
 Backup Configuration File
-- `````mv /etc/placement/placement.conf /etc/placement/placement.conf.org`````
+- `````sudo mv /etc/placement/placement.conf /etc/placement/placement.conf.bak`````
   
 Write Configuration
 - add file /etc/glance/glance-api.conf
