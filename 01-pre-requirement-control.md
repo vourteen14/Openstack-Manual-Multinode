@@ -32,17 +32,17 @@ Sistem Information Network Node
 
 SETUP Operating System
 - Add user to sudoer without password ( in case username is anggasuriana )
- - sudo su >> enter password
- - echo "anggasuriana ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/angga
- - exit && sudo su ( if no ask password adding success )
+ - `````sudo su````` >> enter password
+ - `````echo "anggasuriana ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/angga`````
+ - `````exit && sudo su````` ( if no ask password adding success )
 
 - Update and Upgrade Dependency
- - sudo apt update && sudo apt upgrade -y
+ - `````sudo apt update && sudo apt upgrade -y`````
 
 SETUP Pre Requirement For Openstack
 - Add repository requirement for Openstack
- - sudo apt install software-properties-common -y
- - sudo add-apt-repository cloud-archive:wallaby
- - sudo apt update && sudo apt upgrade -y
+ - `````sudo apt install software-properties-common -y`````
+ - `````sudo add-apt-repository cloud-archive:wallaby`````
+ - `````sudo apt update && sudo apt upgrade -y`````
 
 DO FOR ALL NODE FOR PRE-REQUIREMENT
