@@ -23,6 +23,8 @@ Write Configuration
   - api_servers = http://10.0.0.30:9292
   - [oslo_concurrency]
   - lock_path = $state_path/tmp
+  - [cinder]
+  - os_region_name = RegionOne
   - [keystone_authtoken]
   - www_authenticate_uri = http://10.0.0.30:5000
   - auth_url = http://10.0.0.30:5000
