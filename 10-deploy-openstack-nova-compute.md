@@ -45,6 +45,12 @@ Write Configuration
   - [wsgi]
   - api_paste_config = /etc/nova/api-paste.ini
 
+Edit file /etc/nova/nova-compute.conf
+- Sesuaikan seperti dibawah
+  - ...
+  - [libvirt]
+  - virt_type=qemu
+
 Setup permission configuration files
 - sudo chmod 640 /etc/nova/nova.conf
 - sudo chgrp nova /etc/nova/nova.conf
