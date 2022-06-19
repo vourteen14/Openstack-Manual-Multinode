@@ -21,8 +21,8 @@ Restart mariadb service
 Reconfigure MariaDB
 - `````sudo mysql_secure_installation`````
   - Set root password? [Y/n] y
-    New password: <input root database password>
-    Re-enter new password: <input root database password>
+  - New password: <input root database password>
+  - Re-enter new password: <input root database password>
   - Remove anonymous users? [Y/n] y
   - Disallow root login remotely? [Y/n] y
   - Remove test database and access to it? [Y/n] y
