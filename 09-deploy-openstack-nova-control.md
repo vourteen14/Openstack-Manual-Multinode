@@ -38,7 +38,7 @@ Write/Edit Configuration
   - `````state_path = /var/lib/nova`````
   - `````enabled_apis = osapi_compute,metadata`````
   - `````log_dir = /var/log/nova`````
-  - `````transport_url = rabbit://openstack:[PASSWORD]@[Control-IP]`````
+  - `````transport_url = rabbit://openstack:[PASSWORD]@[Control-IP]:5672/`````
   - `````[api]`````
   - `````auth_strategy = keystone`````
   - `````[glance]`````
