@@ -44,7 +44,7 @@ Write Configuration
   - `````user_domain_name = default`````
   - `````project_name = service`````
   - `````username = glance`````
-  - `````password = <Password>`````
+  - `````password = [PASSWORD]`````
   - `````[paste_deploy]`````
   - `````flavor = keystone`````
   
