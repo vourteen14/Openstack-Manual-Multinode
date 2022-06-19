@@ -29,7 +29,7 @@ Write Environtment file
   - `````export OS_PROJECT_NAME=admin`````
   - `````export OS_USERNAME=admin`````
   - `````export OS_PASSWORD=<Password>`````
-  - `````export OS_AUTH_URL=http://30.30.30.251:5000/v3`````
+  - `````export OS_AUTH_URL=http://[Control-IP]:5000/v3`````
   - `````export OS_IDENTITY_API_VERSION=3`````
   - `````export OS_IMAGE_API_VERSION=2`````
 - setup permission to file
