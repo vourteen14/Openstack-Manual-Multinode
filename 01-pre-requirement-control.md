@@ -62,4 +62,4 @@ SETUP Host file on all Node, edit file /etc/hosts
 NOTE: Change the IP Address with the node IP Address used
 
 SETUP Hostname on all Node
-- sudo hostnamectl set-hostname [NODE-NAME]
+- `````sudo hostnamectl set-hostname [NODE-NAME]`````
