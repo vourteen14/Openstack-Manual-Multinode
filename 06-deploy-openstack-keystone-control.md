@@ -16,7 +16,7 @@ Edit file /etc/keystone/keystone.conf
   - `````provider = fernet`````
 
 Sync Keystone Database
-- `````sudo su -s /bin/bash [Username-With-sudo-allowed -c "keystone-manage db_sync"`````
+- `````sudo su -s /bin/bash -c "keystone-manage db_sync"`````
 
 Initialize Keystone key
 - ````sudo keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone````
