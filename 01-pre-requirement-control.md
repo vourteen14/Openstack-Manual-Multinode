@@ -51,3 +51,13 @@ SETUP Pre Requirement For Openstack
  - `````sudo apt install software-properties-common -y`````
  - `````sudo add-apt-repository cloud-archive:wallaby`````
  - `````sudo apt update && sudo apt upgrade -y`````
+
+SETUP Host file on all Node, edit file /etc/hosts
+- Adjust as below
+ - `````...`````
+ - `````30.30.30.232 storage`````
+ - `````30.30.30.231 compute`````
+ - `````30.30.30.230 control`````
+
+SETUP Hostname on all Node
+- sudo hostnamectl set-hostname [NODE-NAME]
