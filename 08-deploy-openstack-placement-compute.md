@@ -52,10 +52,10 @@ Sync Placement Database
 - `````sudo su -s /bin/bash -c "placement-manage db sync"`````
   
 Restart Apache2 for placement api
-- `````systemctl restart apache2`````
+- `````sudo systemctl restart apache2`````
   
 Check Openstack Service
 - `````openstack service list````` >> IF SHOW PLACEMENT, DEPLOY SUCCESS
 
 Check Apache2 Service
-- `````systemctl status apache2````` >> IF STATUS RUNNING, PLACEMENT RUNNING WELL
+- `````sudo systemctl status apache2````` >> IF STATUS RUNNING, PLACEMENT RUNNING WELL
