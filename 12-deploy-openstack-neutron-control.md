@@ -64,8 +64,8 @@ Write Configuration
   - `````lock_path = $state_path/tmp`````
   
 Setup permission configuration files
-- sudo chmod 640 /etc/neutron/neutron.conf`````
-- sudo chown root:neutron /etc/neutron/neutron.conf`````
+- `````sudo chmod 640 /etc/neutron/neutron.conf`````
+- `````sudo chown root:neutron /etc/neutron/neutron.conf`````
   
 Edit file /etc/neutron/l3_agent.ini
 - Adjust as below
