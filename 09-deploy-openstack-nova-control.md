@@ -28,13 +28,13 @@ Add user placement to mysql
 Install Dependencies
 - `````sudo apt install nova-api nova-conductor nova-scheduler nova-novncproxy python3-novaclient -y`````
   
-Backup Configuration File
+Backup Configuration File (Optional)
 -  `````sudo mv /etc/nova/nova.conf /etc/nova/nova.conf.bak`````
   
-Write Configuration
+Write/Edit Configuration
 - add file /etc/nova/nova.conf
   - `````[DEFAULT]`````
-  - `````my_ip = 30.30.30.251`````
+  - `````my_ip = [Control-IP]`````
   - `````state_path = /var/lib/nova`````
   - `````enabled_apis = osapi_compute,metadata`````
   - `````log_dir = /var/log/nova`````
