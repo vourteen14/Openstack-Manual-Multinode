@@ -9,13 +9,14 @@ Install Dependencies
 - `````sudo apt install mariadb-server -y`````
 
 Edit file /etc/mysql/mariadb.conf.d/50-server.cnf
-- edit on line 104 set to
+- Adjust as below
   - `````character-set-server = utf8mb4`````
   - `````collation-server = utf8mb4_general_ci`````
   - `````bind-address = 0.0.0.0`````
   - `````max_connections = 500`````
-- restart mariadb service
-  - `````sudo systemctl restart mariadb`````
+
+Restart mariadb service
+- `````sudo systemctl restart mariadb`````
 
 Reconfigure MariaDB
 - `````sudo mysql_secure_installation`````
