@@ -21,12 +21,10 @@ Write Configuration
   - `````glance_api_servers = http://[Control-IP]:9292`````
   - `````enabled_backends = lvm`````
   - `````[lvm]`````
-  - `````target_helper = lioadm`````
+  - `````target_helper = tgtadm`````
   - `````target_protocol = iscsi`````
-  - `````target_ip_address = [Storage-IP]`````
   - `````volume_group = cinder-volumes`````
   - `````volume_driver = cinder.volume.drivers.lvm.LVMVolumeDriver`````
-  - `````volumes_dir = $state_path/volumes`````
   - `````[database]`````
   - `````connection = mysql+pymysql://cinder:[PASSWORD]@[Control-IP]/cinder`````
   - `````[keystone_authtoken]`````
