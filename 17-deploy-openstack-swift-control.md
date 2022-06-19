@@ -129,6 +129,6 @@ Restart Swift-Proxy Service
 - `````sudo systemctl restart swift-proxy`````
 
 Copy Swift Ring Files to Storage Node
-- `````scp /etc/swift/object.ring.gz anggasuriana@[Storage-IP]:/home/anggasuriana`````
-- `````scp /etc/swift/container.ring.gz anggasuriana@[Storage-IP]:/home/anggasuriana`````
-- `````scp /etc/swift/account.ring.gz anggasuriana@[Storage-IP]:/home/anggasuriana`````
+- `````sudo scp /etc/swift/object.ring.gz anggasuriana@[Storage-IP]:/home/anggasuriana`````
+- `````sudo scp /etc/swift/container.ring.gz anggasuriana@[Storage-IP]:/home/anggasuriana`````
+- `````sudo scp /etc/swift/account.ring.gz anggasuriana@[Storage-IP]:/home/anggasuriana`````
