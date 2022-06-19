@@ -74,8 +74,8 @@ Edit file /etc/neutron/l3_agent.ini
 Edit file /etc/neutron/dhcp_agent.ini 
 - Adjust as below
   - `````interface_driver = linuxbridge`````
-  - `````dhcp_driver = neutron.agent.linux.dhcp.Dnsmasq``````````
-  - enable_isolated_metadata = true`````
+  - `````dhcp_driver = neutron.agent.linux.dhcp.Dnsmasq`````
+  - `````enable_isolated_metadata = true`````
   
 Edit file /etc/neutron/metadata_agent.ini
 - Adjust as below
@@ -130,18 +130,18 @@ Edit file
   - `````metadata_proxy_shared_secret = metadata_secret`````
   
 Sync Neutron Database
-- sudo ln -s /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugin.ini
-- sudo su -s /bin/bash -c "neutron-db-manage --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head"
+- `````sudo ln -s /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugin.ini`````
+- `````sudo su -s /bin/bash -c "neutron-db-manage --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head"`````
   
 Restart Neutron Service
-- sudo systemctl restart neutron-server && sudo systemctl enable neutron-server
-- sudo systemctl restart neutron-l3-agent && sudo systemctl enable neutron-l3-agent
-- sudo systemctl restart neutron-dhcp-agent && sudo systemctl enable neutron-dhcp-agent
-- sudo systemctl restart neutron-metadata-agent && sudo systemctl enable neutron-metadata-agent
-- sudo systemctl restart neutron-linuxbridge-agent && sudo systemctl enable neutron-linuxbridge-agent
+- `````sudo systemctl restart neutron-server && sudo systemctl enable neutron-server`````
+- `````sudo systemctl restart neutron-l3-agent && sudo systemctl enable neutron-l3-agent`````
+- `````sudo systemctl restart neutron-dhcp-agent && sudo systemctl enable neutron-dhcp-agent`````
+- `````sudo systemctl restart neutron-metadata-agent && sudo systemctl enable neutron-metadata-agent`````
+- `````sudo systemctl restart neutron-linuxbridge-agent && sudo systemctl enable neutron-linuxbridge-agent`````
 
 Restart Nova Service
-- sudo systemctl restart nova-api
+- `````sudo systemctl restart nova-api`````
   
 Check Neutron Service Status
-- openstack network agent list
+- `````openstack network agent list`````
