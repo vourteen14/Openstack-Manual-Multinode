@@ -15,6 +15,9 @@ Edit file /etc/keystone/keystone.conf
   - `````connection = mysql+pymysql://keystone:[PASSWORD]@control/keystone`````
   - `````provider = fernet`````
 
+Sync Keystone Database
+- `````sudo su -s /bin/bash [Username-With-sudo-allowed -c "keystone-manage db_sync"`````
+
 Initialize Keystone key
 - ````sudo keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone````
 - ````sudo keystone-manage credential_setup --keystone-user keystone --keystone-group keystone````
