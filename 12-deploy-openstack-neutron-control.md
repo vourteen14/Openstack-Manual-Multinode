@@ -109,7 +109,7 @@ Edit file /etc/neutron/plugins/ml2/linuxbridge_agent.ini
   - `````enable_security_group = true`````
   - `````firewall_driver = neutron.agent.linux.iptables_firewall.IptablesFirewallDriver`````
 
-Edit file 
+Edit file /etc/nova/nova.conf
 - Adjust as below
   - `````[DEFAULT]`````
   - `````...`````
