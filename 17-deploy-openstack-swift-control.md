@@ -97,26 +97,26 @@ Configure Swift Ring Files
 - `````sudo swift-ring-builder /etc/swift/object.builder create 12 3 1`````
 
 Configure Swift Account Builder
-- `````sudo swift-ring-builder /etc/swift/account.builder add r0z0-30.30.30.232:6002/sdc 100`````
-- `````sudo swift-ring-builder /etc/swift/account.builder add r0z0-30.30.30.232:6002/sdd 100`````
-- `````sudo swift-ring-builder /etc/swift/account.builder add r0z0-30.30.30.232:6002/sde 100`````
+- `````sudo swift-ring-builder /etc/swift/account.builder add r0z0-[Storage-IP]:6002/sdc 100`````
+- `````sudo swift-ring-builder /etc/swift/account.builder add r0z0-[Storage-IP]:6002/sdd 100`````
+- `````sudo swift-ring-builder /etc/swift/account.builder add r0z0-[Storage-IP]:6002/sde 100`````
 - `````sudo swift-ring-builder /etc/swift/account.builder`````
 - `````sudo swift-ring-builder /etc/swift/account.builder rebalance`````
 
 Configure Swift Container Builder
 - `````sudo swift-ring-builder /etc/swift/container.builder create 12 3 1`````
-- `````sudo swift-ring-builder /etc/swift/container.builder add r0z0-30.30.30.232:6001/sdc 100`````
-- `````sudo swift-ring-builder /etc/swift/container.builder add r0z0-30.30.30.232:6001/sdd 100`````
-- `````sudo swift-ring-builder /etc/swift/container.builder add r0z0-30.30.30.232:6001/sde 100`````
+- `````sudo swift-ring-builder /etc/swift/container.builder add r0z0-[Storage-IP]:6001/sdc 100`````
+- `````sudo swift-ring-builder /etc/swift/container.builder add r0z0-[Storage-IP]:6001/sdd 100`````
+- `````sudo swift-ring-builder /etc/swift/container.builder add r0z0-[Storage-IP]:6001/sde 100`````
 - `````sudo swift-ring-builder /etc/swift/container.builder`````
 - `````sudo swift-ring-builder /etc/swift/container.builder rebalance`````
 
 Configure Swift Object Builder
 - `````sudo swift-ring-builder /etc/swift/object.builder create 12 3 1`````
-- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sdc 100`````
-- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sde 100`````
-- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sdd 100`````
-- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sde 100`````
+- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-[Storage-IP]:6000/sdc 100`````
+- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-[Storage-IP]:6000/sde 100`````
+- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-[Storage-IP]:6000/sdd 100`````
+- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-[Storage-IP]:6000/sde 100`````
 - `````sudo swift-ring-builder /etc/swift/object.builder`````
 - `````sudo swift-ring-builder /etc/swift/object.builder rebalance`````
 
@@ -129,4 +129,4 @@ Restart Swift-Proxy Service
 - `````sudo systemctl restart swift-proxy`````
 
 Copy Swift Ring Files to Storage Node
-- `````scp /etc/swift/*.gz anggasuriana@30.30.30.253:/home/anggasuriana`````
+- `````scp /etc/swift/*.gz anggasuriana@[Storage-IP]:/home/anggasuriana`````
