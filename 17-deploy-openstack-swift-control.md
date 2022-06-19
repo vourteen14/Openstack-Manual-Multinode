@@ -92,32 +92,33 @@ Write Configuration
   - `````swift_hash_path_prefix = swift_shared_path`````
 
 Configure Swift Ring Files
-- `````swift-ring-builder /etc/swift/account.builder create 12 3 1`````
-- `````swift-ring-builder /etc/swift/container.builder create 12 3 1`````
-- `````swift-ring-builder /etc/swift/object.builder create 12 3 1`````
+- `````sudo swift-ring-builder /etc/swift/account.builder create 12 3 1`````
+- `````sudo swift-ring-builder /etc/swift/container.builder create 12 3 1`````
+- `````sudo swift-ring-builder /etc/swift/object.builder create 12 3 1`````
 
 Configure Swift Account Builder
-- `````swift-ring-builder /etc/swift/account.builder add r0z0-30.30.30.232:6002/sdc 100`````
-- `````swift-ring-builder /etc/swift/account.builder add r0z0-30.30.30.232:6002/sdd 100`````
-- `````swift-ring-builder /etc/swift/account.builder add r0z0-30.30.30.232:6002/sde 100`````
-- `````swift-ring-builder /etc/swift/account.builder`````
-- `````swift-ring-builder /etc/swift/account.builder rebalance`````
+- `````sudo swift-ring-builder /etc/swift/account.builder add r0z0-30.30.30.232:6002/sdc 100`````
+- `````sudo swift-ring-builder /etc/swift/account.builder add r0z0-30.30.30.232:6002/sdd 100`````
+- `````sudo swift-ring-builder /etc/swift/account.builder add r0z0-30.30.30.232:6002/sde 100`````
+- `````sudo swift-ring-builder /etc/swift/account.builder`````
+- `````sudo swift-ring-builder /etc/swift/account.builder rebalance`````
 
 Configure Swift Container Builder
-- `````swift-ring-builder /etc/swift/container.builder create 12 3 1`````
-- `````swift-ring-builder /etc/swift/container.builder add r0z0-30.30.30.232:6001/sdc 100`````
-- `````swift-ring-builder /etc/swift/container.builder add r0z0-30.30.30.232:6001/sdd 100`````
-- `````swift-ring-builder /etc/swift/container.builder add r0z0-30.30.30.232:6001/sde 100`````
-- `````swift-ring-builder /etc/swift/container.builder`````
-- `````swift-ring-builder /etc/swift/container.builder rebalance`````
+- `````sudo swift-ring-builder /etc/swift/container.builder create 12 3 1`````
+- `````sudo swift-ring-builder /etc/swift/container.builder add r0z0-30.30.30.232:6001/sdc 100`````
+- `````sudo swift-ring-builder /etc/swift/container.builder add r0z0-30.30.30.232:6001/sdd 100`````
+- `````sudo swift-ring-builder /etc/swift/container.builder add r0z0-30.30.30.232:6001/sde 100`````
+- `````sudo swift-ring-builder /etc/swift/container.builder`````
+- `````sudo swift-ring-builder /etc/swift/container.builder rebalance`````
 
 Configure Swift Object Builder
-- `````swift-ring-builder /etc/swift/object.builder create 12 3 1`````
-- `````swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sdc 100`````
-- `````swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sdd 100`````
-- `````swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sde 100`````
-- `````swift-ring-builder /etc/swift/object.builder`````
-- `````swift-ring-builder /etc/swift/object.builder rebalance`````
+- `````sudo swift-ring-builder /etc/swift/object.builder create 12 3 1`````
+- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sdc 100`````
+- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sde 100`````
+- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sdd 100`````
+- `````sudo swift-ring-builder /etc/swift/object.builder add r0z0-30.30.30.232:6000/sde 100`````
+- `````sudo swift-ring-builder /etc/swift/object.builder`````
+- `````sudo swift-ring-builder /etc/swift/object.builder rebalance`````
 
 Setup permission configuration files
 - `````sudo chown swift. /etc/swift/*.gz`````
