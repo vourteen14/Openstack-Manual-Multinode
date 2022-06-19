@@ -100,7 +100,7 @@ Edit file /etc/neutron/plugins/ml2/ml2_conf.ini
 Edit file /etc/neutron/plugins/ml2/linuxbridge_agent.ini
 - Sesuaikan Seperti dibawah
   - [linux_bridge]
-  - physical_interface_mappings = provider:<EXT-Interface>
+  - physical_interface_mappings = provider:<Interface>
   - [vxlan]
   - enable_vxlan = true
   - local_ip = 30.30.30.251
