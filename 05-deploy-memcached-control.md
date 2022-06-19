@@ -6,4 +6,4 @@ Edit file /etc/memcached.conf
   - `````-l 0.0.0.0`````
 
 Restart Service
-- `````sudo systemctl restart memchaced`````
+- `````sudo systemctl restart memcached`````
