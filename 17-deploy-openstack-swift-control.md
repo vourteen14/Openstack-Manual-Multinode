@@ -121,7 +121,9 @@ Configure Swift Object Builder
 - `````sudo swift-ring-builder /etc/swift/object.builder rebalance`````
 
 Setup permission configuration files
-- `````sudo chown swift. /etc/swift/*.gz`````
+- `````sudo chown swift. /etc/swift/account.ring.gz`````
+- `````sudo chown swift. /etc/swift/container.ring.gz`````
+- `````sudo chown swift. /etc/swift/object.ring.gz`````
 
 Restart Swift-Proxy Service
 - `````sudo systemctl restart swift-proxy`````
