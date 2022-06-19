@@ -2,26 +2,26 @@ Activate Environtment File
 - `````source admin-openrc.sh`````
 
 Create Openstack Project
-- `````openstack user create --domain default --project service --password <Password> nova`````
+- `````openstack user create --domain default --project service --password [PASSWORD] nova`````
 - `````openstack role add --project service --user nova admin`````
 - `````openstack service create --name nova --description "OpenStack Compute service" compute`````
 
 Create Openstack Endpoint
-- `````openstack endpoint create --region RegionOne compute public http://30.30.30.251:8774/v2.1/%\(tenant_id\)s`````
-- `````openstack endpoint create --region RegionOne compute internal http://30.30.30.251:8774/v2.1/%\(tenant_id\)s`````
-- `````openstack endpoint create --region RegionOne compute admin http://30.30.30.251:8774/v2.1/%\(tenant_id\)s`````
+- `````openstack endpoint create --region RegionOne compute public http://[Control-IP]:8774/v2.1/%\(tenant_id\)s`````
+- `````openstack endpoint create --region RegionOne compute internal http://[Control-IP]:8774/v2.1/%\(tenant_id\)s`````
+- `````openstack endpoint create --region RegionOne compute admin http://[Control-IP]:8774/v2.1/%\(tenant_id\)s`````
 
 Add user placement to mysql
 - `````sudo mysql`````
 - `````create database nova;`````
-- `````grant all privileges on nova.* to nova@'localhost' identified by '<Password>';`````
-- `````grant all privileges on nova.* to nova@'%' identified by '<Password>';`````
+- `````grant all privileges on nova.* to nova@'localhost' identified by '[PASSWORD]';`````
+- `````grant all privileges on nova.* to nova@'%' identified by '[PASSWORD]';`````
 - `````create database nova_api;`````
-- `````grant all privileges on nova_api.* to nova@'localhost' identified by '<Password>';`````
-- `````grant all privileges on nova_api.* to nova@'%' identified by '<Password>';`````
+- `````grant all privileges on nova_api.* to nova@'localhost' identified by '[PASSWORD]';`````
+- `````grant all privileges on nova_api.* to nova@'%' identified by '[PASSWORD]';`````
 - `````create database nova_cell0;`````
-- `````grant all privileges on nova_cell0.* to nova@'localhost' identified by '<Password>';````` 
-- `````grant all privileges on nova_cell0.* to nova@'%' identified by '<Password>';`````
+- `````grant all privileges on nova_cell0.* to nova@'localhost' identified by '[PASSWORD]';````` 
+- `````grant all privileges on nova_cell0.* to nova@'%' identified by '[PASSWORD]';`````
 - `````flush privileges;`````
 - `````exit;`````
   
@@ -38,36 +38,36 @@ Write Configuration
   - `````state_path = /var/lib/nova`````
   - `````enabled_apis = osapi_compute,metadata`````
   - `````log_dir = /var/log/nova`````
-  - `````transport_url = rabbit://openstack:<Password>@30.30.30.251`````
+  - `````transport_url = rabbit://openstack:[PASSWORD]@[Control-IP]`````
   - `````[api]`````
   - `````auth_strategy = keystone`````
   - `````[glance]`````
-  - `````api_servers = http://30.30.30.251:9292`````
+  - `````api_servers = http://[Control-IP]:9292`````
   - `````[oslo_concurrency]`````
   - `````lock_path = $state_path/tmp`````
   - `````[api_database]`````
-  - `````connection = mysql+pymysql://nova:<Password>@30.30.30.251/nova_api`````
+  - `````connection = mysql+pymysql://nova:[PASSWORD]@[Control-IP]/nova_api`````
   - `````[database]`````
-  - `````connection = mysql+pymysql://nova:<Password>@30.30.30.251/nova`````
+  - `````connection = mysql+pymysql://nova:[PASSWORD]@[Control-IP]/nova`````
   - `````[keystone_authtoken]`````
-  - `````www_authenticate_uri = http://30.30.30.251:5000`````
-  - `````auth_url = http://30.30.30.251:5000`````
-  - `````memcached_servers = 30.30.30.251:11211`````
+  - `````www_authenticate_uri = http://[Control-IP]:5000`````
+  - `````auth_url = http://[Control-IP]:5000`````
+  - `````memcached_servers = [Control-IP]:11211`````
   - `````auth_type = password`````
   - `````project_domain_name = default`````
   - `````user_domain_name = default`````
   - `````project_name = service`````
   - `````username = nova`````
-  - `````password = <Password>`````
+  - `````password = [PASSWORD]`````
   - `````[placement]`````
-  - `````auth_url = http://30.30.30.251:5000`````
+  - `````auth_url = http://[Control-IP]:5000`````
   - `````os_region_name = RegionOne`````
   - `````auth_type = password`````
   - `````project_domain_name = default`````
   - `````user_domain_name = default`````
   - `````project_name = service`````
   - `````username = placement`````
-  - `````password = <Password>`````
+  - `````password = [PASSWORD]`````
   - `````[wsgi]`````
   - `````api_paste_config = /etc/nova/api-paste.ini`````
 
@@ -76,10 +76,10 @@ Setup permission configuration files
 - `````sudo chown root:nova /etc/nova/nova.conf`````
   
 Sync Nova Database
-- `````sudo su -s /bin/bash nova -c "nova-manage api_db sync"`````
-- `````sudo su -s /bin/bash nova -c "nova-manage cell_v2 map_cell0"`````
-- `````sudo su -s /bin/bash nova -c "nova-manage db sync"`````
-- `````sudo su -s /bin/bash nova -c "nova-manage cell_v2 create_cell --name cell1"`````
+- `````sudo su -s /bin/bash -c "nova-manage api_db sync"`````
+- `````sudo su -s /bin/bash -c "nova-manage cell_v2 map_cell0"`````
+- `````sudo su -s /bin/bash -c "nova-manage db sync"`````
+- `````sudo su -s /bin/bash -c "nova-manage cell_v2 create_cell --name cell1"`````
   
 Restart Nova Service
 - `````systemctl restart nova-api && systemctl enable nova-api`````
