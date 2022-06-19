@@ -11,8 +11,8 @@ Install Dependencies
   
 Edit file /etc/keystone/keystone.conf
 - Adjust as below
-  - `````memcache_servers = control:11211`````
-  - `````connection = mysql+pymysql://keystone:[PASSWORD]@control/keystone`````
+  - `````memcache_servers = [Control-IP]:11211`````
+  - `````connection = mysql+pymysql://keystone:[PASSWORD]@[Control-IP]/keystone`````
   - `````provider = fernet`````
 
 Sync Keystone Database
