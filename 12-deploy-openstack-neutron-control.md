@@ -102,7 +102,7 @@ Edit file /etc/neutron/plugins/ml2/linuxbridge_agent.ini
   - `````[linux_bridge]`````
   - `````physical_interface_mappings = provider:[Ext-Interface]`````
   - `````[vxlan]`````
-  - `````enable_vxlan = true``````````
+  - `````enable_vxlan = true`````
   - `````local_ip = [Control-IP]`````
   - `````l2_population = true`````
   - `````[securitygroup]`````
