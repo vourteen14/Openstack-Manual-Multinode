@@ -1,11 +1,9 @@
+Install Dependencies
+- sudo apt install cinder-volume python3-mysqldb python3-rtslib-fb targetcli-fb thin-provisioning-tools -y
+
 Create LVM
 - sudo pvcreate /dev/[disk]
 - sudo vgcreate cinder-volumes /dev/[disk]
-
-
-
-Install Dependencies
-- sudo apt install cinder-volume python3-mysqldb python3-rtslib-fb targetcli-fb -y
 
 Backup Configuration File (Optional)
 - sudo mv /etc/cinder/cinder.conf /etc/cinder/cinder.conf.bak
