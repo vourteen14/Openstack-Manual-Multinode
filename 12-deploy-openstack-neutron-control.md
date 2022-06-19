@@ -22,7 +22,7 @@ Add user neutron to mysql
 Install Dependencies
 - `````sudo apt install neutron-server neutron-plugin-ml2 neutron-linuxbridge-agent neutron-l3-agent neutron-dhcp-agent neutron-metadata-agent python3-neutronclient -y `````
 
-Backup Configuration File
+Backup Configuration File (Optional)
 - `````mv /etc/neutron/neutron.conf /etc/neutron/neutron.conf.bak`````
   
 Write Configuration
