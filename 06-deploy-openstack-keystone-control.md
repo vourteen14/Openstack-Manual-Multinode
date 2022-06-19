@@ -20,7 +20,7 @@ Initialize Keystone key
 - ````sudo keystone-manage credential_setup --keystone-user keystone --keystone-group keystone````
 
 Bootstrap Keystone
-- ````sudo keystone-manage bootstrap --bootstrap-password [PASSWORD] --bootstrap-admin-url http://[Control-IP]:5000/v3/ --bootstrap-internal-url http://[Control-IP]:5000/v3/ --bootstrap-public-url http://[Control-IP]:5000/v3/ -bootstrap-region-id RegionOne````
+- ````sudo keystone-manage bootstrap --bootstrap-password [PASSWORD] --bootstrap-admin-url http://[Control-IP]:5000/v3/ --bootstrap-internal-url http://[Control-IP]:5000/v3/ --bootstrap-public-url http://[Control-IP]:5000/v3/ --bootstrap-region-id RegionOne````
 
 Write Environtment file
 - add file admin-openrc.sh
