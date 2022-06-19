@@ -6,5 +6,3 @@ Restart NTP
 
 Status NTP
 - `````sudo timedatectl timesync-status`````
-
-END OF CONFIG
