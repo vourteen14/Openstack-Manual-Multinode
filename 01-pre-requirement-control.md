@@ -12,7 +12,8 @@ Sistem Information Control Node
  - Memory: 4G
  - Processor: 2 core
  - Harddisk: 40G
- - Network: 30.30.30.251
+ - Network 1: 30.30.30.251 - ens160
+ - Network 2: NO-IP-STATE-UP - ens192
 
 Sistem Information Compute Node
  - Hostname: compute
@@ -20,15 +21,21 @@ Sistem Information Compute Node
  - Memory: 4G
  - Processor: 2 core
  - Harddisk: 40G
- - Network: 30.30.30.252
+ - Network 1: 30.30.30.252 - ens160
+ - Network 2: NO-IP-STATE-UP - ens192
 
-Sistem Information Network Node
- - Hostname: network
+Sistem Information Storage Node
+ - Hostname: storage
  - OS: Ubuntu 20.04
- - Memory: 4G
- - Processor: 2 core
- - Harddisk: 40G
- - Network: 30.30.30.253
+ - Memory: 2G
+ - Processor: 1 core
+ - Harddisk 1: 40G
+ - Harddisk 2: 20G
+ - Harddisk 3: 8G
+ - Harddisk 4: 8G
+ - Harddisk 5: 8G
+ - Network 1: 30.30.30.253 - ens160
+ - Network 2: NO-IP-STATE-UP - ens192
 
 SETUP Operating System
 - Add user to sudoer without password ( in case username is anggasuriana )
