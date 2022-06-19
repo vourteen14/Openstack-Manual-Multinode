@@ -1,5 +1,6 @@
-Configure File /etc/systemd/timesyncd.conf
-- `````set NTP=..````` to `````NTP=id.pool.ntp.org`````
+Edit file /etc/systemd/timesyncd.conf
+- Adjust as below
+  - `````set NTP=..````` to `````NTP=id.pool.ntp.org`````
 
 Restart NTP
 - `````sudo systemctl restart systemd-timesyncd`````
