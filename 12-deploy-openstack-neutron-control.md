@@ -13,9 +13,9 @@ Create Openstack Endpoint
   
 Add user neutron to mysql
 - `````sudo mysql`````
-- `````create database neutron_ml2;
-- `````grant all privileges on neutron_ml2.* to neutron@'localhost' identified by '<Password>';`````
-- `````grant all privileges on neutron_ml2.* to neutron@'%' identified by '<Password>';`````
+- `````create database neutron_ml2;`````
+- `````grant all privileges on neutron_ml2.* to neutron@'localhost' identified by '[PASSWORD]';`````
+- `````grant all privileges on neutron_ml2.* to neutron@'%' identified by '[PASSWORD]';`````
 - `````flush privileges;`````
 - `````exit;`````
   
