@@ -7,7 +7,7 @@ Copy Ring Files
 Make Filesystem & Swift share folder
 - `````sudo mkdir -p /srv/node/sdc`````
 - `````sudo mkdir -p /srv/node/sdd`````
-- `````sudo mkdir -p /srv/node/sdc``````
+- ``````sudo mkdir -p /srv/node/sdc``````
 - ``````sudo mkfs.xfs  /dev/sdc``````
 - ``````sudo mkfs.xfs  /dev/sdd``````
 - ``````sudo mkfs.xfs  /dev/sde``````
