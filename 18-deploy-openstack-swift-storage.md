@@ -5,8 +5,11 @@ Copy Ring Files
 - `````sudo cp /home/anggasuriana/*.gz /etc/swift/`````
  
 Setup permission configuration files
+- `````sudo mkdir /srv/node`````
 - `````sudo chown -R swift /srv/node`````
-- `````sudo chown -R /etc/swift/*.gz`````
+- `````sudo chown -R swift /etc/swift/account.ring.gz`````
+- `````sudo chown -R swift /etc/swift/object.ring.gz`````
+- `````sudo chown -R swift /etc/swift/container.ring.gz`````
 
 Write Configuration
 - add file /etc/swift/swift.conf
