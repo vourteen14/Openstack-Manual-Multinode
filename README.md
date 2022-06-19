@@ -1,2 +1,4 @@
 # Openstack-Manual
-Deployment Openstack Wallaby on Ubuntu 20.04 Manual
+Instruction
+- Do it exactly in the order
+- Previous configuration can affect other services
