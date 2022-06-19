@@ -12,7 +12,7 @@ Sistem Information Control Node
  - Memory: 4G
  - Processor: 2 core
  - Harddisk: 40G
- - Network 1: 30.30.30.251 - ens160
+ - Network 1: 30.30.30.230 - ens160
  - Network 2: NO-IP-STATE-UP - ens192
 
 Sistem Information Compute Node
@@ -21,7 +21,7 @@ Sistem Information Compute Node
  - Memory: 4G
  - Processor: 2 core
  - Harddisk: 40G
- - Network 1: 30.30.30.252 - ens160
+ - Network 1: 30.30.30.231 - ens160
  - Network 2: NO-IP-STATE-UP - ens192
 
 Sistem Information Storage Node
@@ -34,7 +34,7 @@ Sistem Information Storage Node
  - Harddisk 3: 8G
  - Harddisk 4: 8G
  - Harddisk 5: 8G
- - Network 1: 30.30.30.253 - ens160
+ - Network 1: 30.30.30.232 - ens160
  - Network 2: NO-IP-STATE-UP - ens192
 
 SETUP Operating System
@@ -51,5 +51,3 @@ SETUP Pre Requirement For Openstack
  - `````sudo apt install software-properties-common -y`````
  - `````sudo add-apt-repository cloud-archive:wallaby`````
  - `````sudo apt update && sudo apt upgrade -y`````
-
-DO FOR ALL NODE FOR PRE-REQUIREMENT
