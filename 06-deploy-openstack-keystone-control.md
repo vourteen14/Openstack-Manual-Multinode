@@ -16,11 +16,11 @@ Edit file /etc/keystone/keystone.conf
   - `````provider = fernet`````
 
 Initialize Keystone key
-- ````keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone````
-- ````keystone-manage credential_setup --keystone-user keystone --keystone-group keystone````
+- ````sudo keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone````
+- ````sudo keystone-manage credential_setup --keystone-user keystone --keystone-group keystone````
 
 Bootstrap Keystone
-- ````keystone-manage bootstrap --bootstrap-password [PASSWORD] --bootstrap-admin-url http://control:5000/v3/ --bootstrap-internal-url http://control:5000/v3/ --bootstrap-public-url http://control:5000/v3/ -bootstrap-region-id RegionOne````
+- ````sudo keystone-manage bootstrap --bootstrap-password [PASSWORD] --bootstrap-admin-url http://control:5000/v3/ --bootstrap-internal-url http://control:5000/v3/ --bootstrap-public-url http://control:5000/v3/ -bootstrap-region-id RegionOne````
 
 Write Environtment file
 - add file admin-openrc.sh
