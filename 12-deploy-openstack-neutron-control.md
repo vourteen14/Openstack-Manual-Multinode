@@ -2,14 +2,14 @@ Activate Environtment File
 - `````source admin-openrc.sh`````
 
 Create Openstack Project
-- `````openstack user create --domain default --project service --password <Password> neutron`````
+- `````openstack user create --domain default --project service --password [PASSWORD] neutron`````
 - `````openstack role add --project service --user neutron admin`````
 - `````openstack service create --name neutron --description "OpenStack Networking service" network`````
   
 Create Openstack Endpoint
-- `````openstack endpoint create --region RegionOne network public http://30.30.30.251:9696`````
-- `````openstack endpoint create --region RegionOne network internal http://30.30.30.251:9696`````
-- `````openstack endpoint create --region RegionOne network admin http://30.30.30.251:9696`````
+- `````openstack endpoint create --region RegionOne network public http://[Control-IP]:9696`````
+- `````openstack endpoint create --region RegionOne network internal http://[Control-IP]:9696`````
+- `````openstack endpoint create --region RegionOne network admin http://[Control-IP]:9696`````
   
 Add user neutron to mysql
 - `````sudo mysql`````
@@ -36,7 +36,7 @@ Write Configuration
   - `````allow_overlapping_ips = True`````
   - `````notify_nova_on_port_status_changes = True`````
   - `````notify_nova_on_port_data_changes = True`````
-  - `````transport_url = rabbit://openstack:[PASSWORD]@[Control-IP]`````
+  - `````transport_url = rabbit://openstack:[PASSWORD]@[Control-IP]:5672/`````
   - `````[agent]`````
   - `````root_helper = sudo /usr/bin/neutron-rootwrap /etc/neutron/rootwrap.conf`````
   - `````[keystone_authtoken]`````
