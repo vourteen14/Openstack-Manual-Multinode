@@ -59,5 +59,7 @@ SETUP Host file on all Node, edit file /etc/hosts
  - `````30.30.30.231 compute`````
  - `````30.30.30.230 control`````
 
+NOTE: Change the IP Address with the node IP Address used
+
 SETUP Hostname on all Node
 - sudo hostnamectl set-hostname [NODE-NAME]
