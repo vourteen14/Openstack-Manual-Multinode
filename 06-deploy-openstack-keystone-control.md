@@ -11,8 +11,8 @@ Install Dependencies
   
 Edit file /etc/keystone/keystone.conf
 - Adjust as below
-  - `````memcache_servers = controller:11211`````
-  - `````connection = mysql+pymysql://keystone:[PASSWORD]@controller/keystone`````
+  - `````memcache_servers = control:11211`````
+  - `````connection = mysql+pymysql://keystone:[PASSWORD]@control/keystone`````
   - `````provider = fernet`````
 
 Initialize Keystone key
@@ -20,7 +20,7 @@ Initialize Keystone key
 - ````keystone-manage credential_setup --keystone-user keystone --keystone-group keystone````
 
 - Bootstrap Keystone
-  - ````keystone-manage bootstrap --bootstrap-password <Password> --bootstrap-admin-url http://30.30.30.251:5000/v3/ --bootstrap-internal-url http://30.30.30.251r:5000/v3/ --bootstrap-public-url http://30.30.30.251:5000/v3/ -bootstrap-region-id RegionOne````
+  - ````keystone-manage bootstrap --bootstrap-password [PASSWORD] --bootstrap-admin-url http://control:5000/v3/ --bootstrap-internal-url http://control:5000/v3/ --bootstrap-public-url http://control:5000/v3/ -bootstrap-region-id RegionOne````
 
 Write Environtment file
 - add file admin-openrc.sh
