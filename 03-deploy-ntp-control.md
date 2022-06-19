@@ -5,5 +5,8 @@ Edit file /etc/systemd/timesyncd.conf
 Restart NTP
 - `````sudo systemctl restart systemd-timesyncd`````
 
+Set NTP Zone to Asia/Jakarta
+- `````sudo timedatectl set-timezone Asia/Jakarta`````
+
 Status NTP
 - `````sudo timedatectl timesync-status`````
