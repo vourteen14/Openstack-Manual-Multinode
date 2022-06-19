@@ -3,9 +3,19 @@ Install Dependencies
 
 Copy Ring Files
 - `````sudo cp /home/anggasuriana/*.gz /etc/swift/`````
+
+Make Filesystem & Swift share folder
+- `````sudo mkdir -p /srv/node/sdc`````
+- `````sudo mkdir -p /srv/node/sdd````
+- `````sudo mkdir -p /srv/node/sdc``````
+- ``````sudo mkfs.xfs  /dev/sdc``````
+- ``````sudo mkfs.xfs  /dev/sdd``````
+- ``````sudo mkfs.xfs  /dev/sde``````
+- ``````sudo mount -o noatime,nodiratime /dev/sde /srv/node/sdc``````
+- ``````sudo mount -o noatime,nodiratime /dev/sde /srv/node/sdd``````
+- ``````sudo mount -o noatime,nodiratime /dev/sde /srv/node/sde``````
  
 Setup permission configuration files
-- `````sudo mkdir /srv/node`````
 - `````sudo chown -R swift /srv/node`````
 - `````sudo chown -R swift /etc/swift/account.ring.gz`````
 - `````sudo chown -R swift /etc/swift/object.ring.gz`````
