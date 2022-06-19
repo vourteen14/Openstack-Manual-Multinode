@@ -55,7 +55,7 @@ Setup permission configuration files
 - `````sudo chgrp cinder /etc/cinder/cinder.conf`````
 
 Sync Neutron Database
-- `````sudo su -s /bin/bash cinder -c "cinder-manage db sync"`````
+- `````sudo su -s /bin/bash -c "cinder-manage db sync"`````
   
 Restart Cinder Service
 - `````sudo systemctl restart cinder-scheduler && sudo systemctl restart cinder-scheduler`````
