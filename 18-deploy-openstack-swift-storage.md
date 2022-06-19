@@ -16,6 +16,7 @@ Write Configuration
   - `````[swift-hash]`````
   - `````swift_hash_path_suffix = swift_shared`````
   - `````swift_hash_path_prefix = swift_shared`````
+
 Write Configuration
 - add file /etc/rsyncd.conf
   - `````pid file = /var/run/rsyncd.pid`````
