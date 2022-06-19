@@ -54,5 +54,8 @@ SETUP Pre Requirement For Openstack
 
 NOTE: Change the IP Address with the node IP Address used
 
+SETUP Interface to be UP
+- `````sudo ip link set [INTERFACE_NAME] up`````
+
 SETUP Hostname on all Node
 - `````sudo hostnamectl set-hostname [NODE-NAME]`````
