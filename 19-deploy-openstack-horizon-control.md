@@ -1,22 +1,21 @@
 Install Dependencies
-- sudo apt install openstack-dashboard
+- `````sudo apt install openstack-dashboard -y`````
 
 Edit file /etc/openstack-dashboard/local_settings.py 
 - Adjust as below
-  - CACHES = {
-  -    'default': {
-  -      'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-  -      'LOCATION': 'controller:11211',
-  -   },
-  - }
-  - SESSION_ENGINE = "django.contrib.sessions.backends.cache"
-  - OPENSTACK_HOST = "30.30.30.251"
-  - OPENSTACK_KEYSTONE_URL = "http://30.30.30.251:5000/v3"
-  - TIME_ZONE = "Asia/Jakarta"
-  - OPENSTACK_KEYSTONE_MULTIDOMAIN_SUPPORT = True
-  - OPENSTACK_KEYSTONE_DEFAULT_DOMAIN = 'Default'
-  - OPENSTACK_KEYSTONE_DEFAULT_ROLE = 'admin'
-
+  - `````CACHES = {`````
+  - `````   'default': {`````
+  - `````     'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',`````
+  - `````     'LOCATION': '[Control-IP]:11211',`````
+  - `````  },`````
+  - `````}`````
+  - `````SESSION_ENGINE = "django.contrib.sessions.backends.cache"`````
+  - `````OPENSTACK_HOST = "[Control-IP]"`````
+  - `````OPENSTACK_KEYSTONE_URL = "http://[Control-IP]:5000/v3"`````
+  - `````TIME_ZONE = "Asia/Jakarta"`````
+  - `````OPENSTACK_KEYSTONE_MULTIDOMAIN_SUPPORT = True`````
+  - `````OPENSTACK_KEYSTONE_DEFAULT_DOMAIN = 'Default'`````
+  - `````OPENSTACK_KEYSTONE_DEFAULT_ROLE = 'admin'`````
 
 Reload & restart horizon service
-- systemctl reload apache2 && systemctl restart apache2
+- `````sudo systemctl reload apache2 && sudo systemctl restart apache2`````
