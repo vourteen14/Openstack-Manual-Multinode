@@ -1,5 +1,5 @@
 Install Dependencies
-- `````sudo apt install neutron-linuxbridge-agent python3-neutron-fwaas`````
+- `````sudo apt install neutron-linuxbridge-agent python3-neutron-fwaas -y`````
 
 Edit file /etc/neutron/neutron.conf
 - Sesuaikan seperti dibawah
