@@ -82,10 +82,10 @@ Sync Nova Database
 - `````sudo su -s /bin/bash -c "nova-manage cell_v2 create_cell --name cell1"`````
   
 Restart Nova Service
-- `````systemctl restart nova-api && systemctl enable nova-api`````
-- `````systemctl restart nova-conductor && systemctl enable nova-conductor`````
-- `````systemctl restart nova-scheduler && systemctl enable nova-scheduler`````
-- `````systemctl restart nova-novncproxy && systemctl enable nova-novncproxy````` 
+- `````sudo systemctl restart nova-api && sudo systemctl enable nova-api`````
+- `````sudo systemctl restart nova-conductor && sudo systemctl enable nova-conductor`````
+- `````sudo systemctl restart nova-scheduler && sudo systemctl enable nova-scheduler`````
+- `````sudo systemctl restart nova-novncproxy && sudo systemctl enable nova-novncproxy````` 
 
 Check Nova Service Status
 - `````openstack compute service list````` >> It should be shown nova-conductor and nova-scheduller
