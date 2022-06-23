@@ -2,7 +2,7 @@ Install Dependencies
 - `````sudo apt install neutron-linuxbridge-agent python3-neutron-fwaas -y`````
 
 Edit file /etc/neutron/neutron.conf
-- Sesuaikan seperti dibawah
+- Adjust as below
   - `````[DEFAULT]`````
   - `````...`````
   - `````transport_url = rabbit://openstack:[PASSWORD]@[Control-IP]:5672`````
@@ -25,7 +25,7 @@ Edit file /etc/neutron/neutron.conf
   - `````lock_path = /var/lib/neutron/tmp`````
 
 Edit file /etc/neutron/plugins/ml2/linuxbridge_agent.ini
-- Sesuaikan seperti dibawah  
+- Adjust as below  
   - `````[linux_bridge]`````
   - `````physical_interface_mappings = provider:[Ext-Interface]`````
   - `````[vxlan]`````
@@ -37,7 +37,7 @@ Edit file /etc/neutron/plugins/ml2/linuxbridge_agent.ini
   - `````firewall_driver = neutron.agent.linux.iptables_firewall.IptablesFirewallDriver`````
 
 Edit file /etc/nova/nova.conf
-- Sesuaikan seperti dibawah
+- Adjust as below
   - `````[DEFAULT]`````
   - `````...`````
   - `````[api]`````
